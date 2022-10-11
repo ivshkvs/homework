@@ -1,0 +1,47 @@
+---
+- name: installation of apache / downloading html page
+  hosts: all
+  become: yes
+
+  vars:
+   source_file: ./index.html
+   destin_file: /var/www/html
+ 
+  tasks:
+  - name: ansible os version
+    debug: var=ansible_os_family
+
+  - block:
+    
+     - name: installing apache for debian-based systems
+       apt: name=apache2 state=latest
+
+     - name: copying html-file
+       copy: src={{ source_file }} dest={{ destin_file }} mode=775
+       notify: restart apache debian
+
+     - name: launch and enable on startup
+       service: name=apache2 state=started enabled=yes
+
+    when: ansible_os_family == "Debian"
+
+  - block:
+
+     - name: installing apache for redhat-based systems
+       yum: name=httpd state=latest
+
+     - name: copying html-file
+       copy: src={{ source_file }} dest={{ destin_file }} mode=775
+       notify: restart apache redhat
+
+     - name: launch and enable on startup
+       service: name=httpd state=started enabled=yes
+
+    when: ansible_os_family == "RedHat"
+ 
+  handlers:
+  - name: restart apache debian
+    service: name=apache2 state=restarted
+ 
+  - name: restart apache redhat
+    service: name=httpd state=restarted
