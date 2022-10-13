@@ -1,0 +1,13 @@
+[debian_hosts]
+debian   ansible_host=54.91.203.114
+
+[ubuntu_hosts]
+ubuntu   ansible_host=3.91.100.177
+
+[centos_hosts]
+centos   ansible_host=52.90.172.39
+
+[all_hosts:children]
+debian_hosts
+ubuntu_hosts
+centos_hosts
