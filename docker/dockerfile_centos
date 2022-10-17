@@ -1,0 +1,7 @@
+FROM centos:7
+RUN yum -y update
+RUN yum install -y epel-release
+RUN yum install -y nginx
+COPY ./index.html /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 80
