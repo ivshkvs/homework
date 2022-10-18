@@ -1,47 +1,30 @@
 #!/bin/bash
 
-#Условия бэкапирования
+user=`whoami`
+name=$1
+path=$2
+number=$3
 
-echo "Which file or folder do you need to backup?"
-read name
-
-echo "Where to save this backup?"
-read path
-
-echo "How many copies do you want to keep?"
-read number
-
-#Проверка существует ли запрашиваемая директория для создания бэкапа, если нет - её создание
-#Команда "cd $path" используется для того, чтобы архиватор zip создавал бэкап в заданной директории
-#Альтернативного решения не нашел
- 
+#search / create requested directory
 if [[ !(-e $path) ]]
 then
-mkdir $path
-cd $path
+ mkdir $path
 else 
-cd $path
+ cd $path
 fi 
 
-#Создание переменных для подсчета файлов(без директорий) и дальнейшего удаления лишних бэкапов
-
+#deleting extra files
 file_count=$(find $path -maxdepth 1 -type f | wc -l)
-file_depth=$(($number+1))
+file_depth=$(($number))
 file_clear=$(ls -1t | tail -n +$file_depth | xargs rm -f)
-
-#Сравнение текущего количества файлов в директории с желаемым количеством бэкапов
-#Удаление лишних(наиболее старых)
 
 if [[ $file_count -gt $number ]]
 then
-cd $path
-$file_clear
-else
-:
+ cd $path
+ $file_clear
 fi
 
-#Создание короткого имени бэкапа на основании текущего системного времени
-
-name_date=$(date +"%T")
-zip $name_date $name
-echo "Backup complete!"
+#archive naming based on username and system time
+name_date="${user}_$(date +"date_%d_%m_%Y"_time_%H_%M).tgz"
+tar -zcf $name_date $name
+echo "Backup complete"
