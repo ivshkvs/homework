@@ -1,0 +1,33 @@
+[Mon Nov 14 18:46:37.405307 2022] [authz_core:error] [pid 16:tid 139791052043840] [client 172.19.0.1:57086] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+[Mon Nov 14 18:46:37.795099 2022] [authz_core:error] [pid 16:tid 139791043651136] [client 172.19.0.1:57086] AH01630: client denied by server configuration: /opt/apache2/www.test.com/favicon.ico, referer: http://localhost:1111/
+[Mon Nov 14 18:47:42.932007 2022] [authz_core:error] [pid 17:tid 139790909433408] [client 172.19.0.1:57094] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+[Mon Nov 14 18:47:43.440916 2022] [authz_core:error] [pid 17:tid 139791043651136] [client 172.19.0.1:57094] AH01630: client denied by server configuration: /opt/apache2/www.test.com/favicon.ico, referer: http://127.0.0.1:1111/
+[Mon Nov 14 18:50:58.522056 2022] [authz_core:error] [pid 8:tid 139691588314688] [client 172.19.0.1:57098] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+[Mon Nov 14 18:50:58.848889 2022] [authz_core:error] [pid 8:tid 139691579921984] [client 172.19.0.1:57098] AH01630: client denied by server configuration: /opt/apache2/www.test.com/favicon.ico, referer: http://127.0.0.1:1111/
+[Mon Nov 14 19:00:07.613922 2022] [authz_core:error] [pid 9:tid 139713630848576] [client 172.19.0.1:57100] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+[Mon Nov 14 19:00:08.037484 2022] [authz_core:error] [pid 9:tid 139713622455872] [client 172.19.0.1:57100] AH01630: client denied by server configuration: /opt/apache2/www.test.com/favicon.ico, referer: http://127.0.0.1:1111/
+[Mon Nov 14 19:04:06.131949 2022] [authz_core:error] [pid 10:tid 139713516127808] [client 172.19.0.1:57112] AH01630: client denied by server configuration: /opt/apache2/www.test.com/favicon.ico, referer: http://127.0.0.1:1111/
+[Mon Nov 14 19:58:25.318893 2022] [authz_core:error] [pid 17:tid 139781514192448] [client 172.19.0.1:57122] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+[Mon Nov 14 19:58:25.701443 2022] [authz_core:error] [pid 17:tid 139781497407040] [client 172.19.0.1:57122] AH01630: client denied by server configuration: /opt/apache2/www.test.com/favicon.ico, referer: http://127.0.0.1:1111/
+[Mon Nov 14 19:59:41.896993 2022] [authz_core:error] [pid 16:tid 139781514192448] [client 172.19.0.1:57134] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+[Mon Nov 14 19:59:42.264169 2022] [authz_core:error] [pid 16:tid 139781505799744] [client 172.19.0.1:57134] AH01630: client denied by server configuration: /opt/apache2/www.test.com/favicon.ico, referer: http://172.19.189.38:1111/
+[Mon Nov 14 20:00:07.239041 2022] [authz_core:error] [pid 17:tid 139781388367424] [client 172.19.0.1:57148] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+[Mon Nov 14 20:00:07.594321 2022] [authz_core:error] [pid 17:tid 139781119931968] [client 172.19.0.1:57152] AH01630: client denied by server configuration: /opt/apache2/www.test.com/favicon.ico, referer: http://localhost:1111/
+[Mon Nov 14 20:02:53.006254 2022] [authz_core:error] [pid 17:tid 139781472228928] [client 172.19.0.1:57174] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+[Mon Nov 14 20:14:39.663005 2022] [authz_core:error] [pid 16:tid 139781119931968] [client 172.19.0.1:57176] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+[Mon Nov 14 20:14:40.011407 2022] [authz_core:error] [pid 16:tid 139781111539264] [client 172.19.0.1:57176] AH01630: client denied by server configuration: /opt/apache2/www.test.com/favicon.ico, referer: http://127.0.0.1:1111/
+[Mon Nov 14 20:27:27.780637 2022] [authz_core:error] [pid 10:tid 140035782411840] [client 172.19.0.1:57180] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+[Mon Nov 14 20:27:28.003512 2022] [authz_core:error] [pid 10:tid 140035774019136] [client 172.19.0.1:57180] AH01630: client denied by server configuration: /opt/apache2/www.test.com/favicon.ico, referer: http://127.0.0.1:1111/
+[Mon Nov 14 20:28:33.097133 2022] [authz_core:error] [pid 10:tid 140035740448320] [client 172.19.0.1:57190] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+[Mon Nov 14 20:30:10.058252 2022] [authz_core:error] [pid 9:tid 139949795210816] [client 172.19.0.1:57198] AH01630: client denied by server configuration: /opt/apache2/www.test.com/
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.2. Set the 'ServerName' directive globally to suppress this message
+[Mon Nov 14 21:04:35.781408 2022] [mpm_event:notice] [pid 16:tid 140173384333184] AH00489: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Mon Nov 14 21:04:35.781543 2022] [core:notice] [pid 16:tid 140173384333184] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.2. Set the 'ServerName' directive globally to suppress this message
+[Mon Nov 14 21:16:00.547560 2022] [core:warn] [pid 8:tid 140018491230080] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Nov 14 21:16:00.549233 2022] [mpm_event:notice] [pid 8:tid 140018491230080] AH00489: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Mon Nov 14 21:16:00.549270 2022] [core:notice] [pid 8:tid 140018491230080] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.2. Set the 'ServerName' directive globally to suppress this message
+[Mon Nov 14 21:22:22.903912 2022] [core:warn] [pid 8:tid 139808796796800] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Nov 14 21:22:22.905067 2022] [mpm_event:notice] [pid 8:tid 139808796796800] AH00489: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Mon Nov 14 21:22:22.905106 2022] [core:notice] [pid 8:tid 139808796796800] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
