@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Set numer of rows and columns
+# Set number of rows and columns
 rows=4
 columns=5
 
