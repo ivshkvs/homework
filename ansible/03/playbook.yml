@@ -1,0 +1,7 @@
+---
+- name: installation of apache / downloading html page
+  hosts: all
+  become: yes
+
+  roles:
+   - apache_html_roles
