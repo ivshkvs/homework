@@ -1,0 +1,23 @@
+---
+# tasks file for apache_html_roles
+
+- block:
+   - name: installing apache for debian-based systems
+     apt: name=apache2 state=latest
+   - name: launch and enable on startup
+     service: name=apache2 state=started enabled=yes
+  when: ansible_os_family == "Debian"
+
+- block:
+   - name: installing apache for redhat-based systems
+     yum: name=httpd state=latest
+   - name: launch and enable on startup
+     service: name=httpd state=started enabled=yes
+  when: ansible_os_family == "RedHat"
+
+- name: generating html-file
+  template: src=index.j2 dest={{ destin_file }}/index.html mode=775
+  notify:
+   - restart apache debian
+   - restart apache redhat
+
