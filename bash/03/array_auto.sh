@@ -4,7 +4,7 @@
 rows=4
 columns=5
 
-# Create random two-level array 
+# Create two-level array 
 declare -A matrix
 for ((i=0; i<$rows; i++))
 do
