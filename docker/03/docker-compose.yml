@@ -1,0 +1,28 @@
+version: "3"
+services:
+
+ apache:
+
+  build: ./ubuntu
+  ports:
+     - 1111:80 
+  volumes:
+     - "./html:/var/www/html"
+  container_name: ubuntu_apache
+  networks:
+     - first
+
+ nginx:
+
+  build: ./centos
+  ports:
+     - 2222:80
+  volumes:
+     - "./html:/usr/share/nginx/html"
+  container_name: centos_nginx
+  networks:
+     - second
+
+networks:
+     first:
+     second:
