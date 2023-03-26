@@ -1,0 +1,41 @@
+version: "3"
+services:
+
+  centos_nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.centos_nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - frontend
+      - backend
+
+  ubuntu_apache:
+    build:
+      context: .
+      dockerfile: Dockerfile.ubuntu_apache
+    ports:
+      - "8081:80"
+    networks:
+      - frontend
+      - backend
+
+  haproxy:
+    build:
+      context: .
+      dockerfile: Dockerfile.haproxy
+    ports:
+      - "80:80"
+    networks:
+      - frontend
+      - backend
+    depends_on:
+      - centos_nginx
+      - ubuntu_apache
+
+networks:
+  frontend:
+  backend:
