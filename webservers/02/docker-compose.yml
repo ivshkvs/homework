@@ -8,7 +8,7 @@ services:
     volumes:
       - ./html:/opt/apache2/www.test.com
       - ./ubuntu/logs:/opt/apache2/logs
-    container_name: ubuntu_apache_2
+    container_name: ubuntu_apache
     networks:
       - first
 
@@ -19,7 +19,7 @@ services:
     volumes:
       - ./html:/opt/nginx/www.test.com
       - ./centos/logs:/opt/nginx/logs
-    container_name: centos_nginx_2
+    container_name: centos_nginx
     networks:
      - second
      
