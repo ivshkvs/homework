@@ -1,7 +1,7 @@
 import codecs
 
 def add_credentials(host, username, password, filename):
-    # Open file to add information
+    # Add information to file
     with codecs.open(filename, "a", encoding="utf-8") as file:
         # Write new values to file
         file.write(f"{host},{username},{password}\n")
