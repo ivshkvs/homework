@@ -1,0 +1,9 @@
+Started by upstream project "docker_ci" build number 15
+originally caused by:
+ Started by user Saveli Ivashkov
+Running as SYSTEM
+Building remotely on TEST NODE (ubuntu20 ubuntu ubuntu_ansible) in workspace /home/ubuntu/jenkins/workspace/docker_cd
+[docker_cd] $ /bin/sh -xe /tmp/jenkins11033233501219739960.sh
++ sudo docker run -p 8082:80 -d --name docker_jenkins --rm docker_jenkins:one
+e44fd08010a3fff9f8dd1111a37a9c4a6c8c178d1759019e5624bc37f5c25b95
+Finished: SUCCESS
