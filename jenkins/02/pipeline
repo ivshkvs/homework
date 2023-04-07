@@ -1,0 +1,26 @@
+pipeline {
+    agent {
+        label 'TEST NODE'
+    }
+    parameters {
+        string(name: 'JENKINS_DOCKER_MESSAGE', defaultValue: 'saveli')
+        string(name: 'JENKINS_IMAGE_NAME', defaultValue: 'docker_jenkins')
+        string(name: 'JENKINS_IMAGE_TAG', defaultValue: 'one')
+    }
+    stages {
+        stage('Build Docker image') {
+            steps {
+                git branch: 'master', url: 'https://github.com/ivshkvs/jenkins.git'
+                sh "sudo docker build -t \"$JENKINS_IMAGE_NAME:$JENKINS_IMAGE_TAG\" --build-arg 
+DOCKER_MESSAGE=\"$JENKINS_DOCKER_MESSAGE\" ."
+            }
+        }
+        stage('Run Docker container') {
+            steps {
+                sh "sudo docker run -p 8082:80 -d --name docker_jenkins --rm 
+\"$JENKINS_IMAGE_NAME:$JENKINS_IMAGE_TAG\""
+            }
+        }
+    }
+}
+
